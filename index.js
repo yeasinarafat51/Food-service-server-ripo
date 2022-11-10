@@ -38,7 +38,7 @@ async function run(){
     try{
         const foodCollection = client.db('food').collection('servicess');
         const ordercollection = client.db('food').collection('order')
-        // const addcollection = client.db('food').collection('abbccddrddrrxxxyyy')
+        // const addcollection = client.db('food').collection('aaaaabbccddrddrrxxxyyy')
 
         
 
@@ -96,9 +96,10 @@ async function run(){
         });
 
         app.post('/servic', async(req, res) =>{
-            console.log(req)
+            
             const add = req.body;
             const result = await foodCollection.insertOne(add);
+           
             res.send(result);
         });
         app.post('/services', async(req, res) => {
